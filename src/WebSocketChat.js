@@ -8,7 +8,7 @@ function WebSocketChat({ token }) {
     useEffect(() => {
         if(token) {
             // Connect to WebSocket with token
-            const socket = new WebSocket(`ws://localhost:8001/?token=${token}`);
+            const socket = new WebSocket(`ws://localhost:5000/?token=${token}`);
             setWs(socket);
 
             socket.onopen = () => {

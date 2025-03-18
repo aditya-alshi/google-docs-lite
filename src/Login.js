@@ -8,7 +8,7 @@ function Login({ onLogin }) {
     const handleLogin = async (e) => {
         e.preventDefault();
         try{
-            const response = await axios.post('http://localhost:8001/login', { username, password });
+            const response = await axios.post('http://localhost:5000/login', { username, password });
             const token = {token: response.data.token, username};
             alert('Login successful');
             onLogin(token);
